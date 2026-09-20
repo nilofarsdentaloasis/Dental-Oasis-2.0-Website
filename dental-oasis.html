@@ -2805,6 +2805,246 @@ footer::before{
 }
 @media(prefers-reduced-motion:reduce){.tr-s *,.tr-s *::before,.tr-s *::after{animation:none!important}}
 
+
+/* ============================================================
+   MOBILE HERO SECTION – phones only (max 767px)
+   Desktop hero is HIDDEN on mobile via the rule at the bottom.
+   All .mh-* classes are scoped so they NEVER affect desktop.
+   ============================================================ */
+@media(max-width:767px){
+  /* Hide the desktop hero on mobile */
+  .hero{display:none!important}
+
+  /* ---- canvas & photo ---- */
+  .mh-s{
+    position:relative;
+    width:100%;
+    max-width:520px;
+    margin:0 auto;
+    overflow:hidden;
+    background:linear-gradient(135deg,#5a1628 0%,#7a2340 38%,#9b3f56 65%,#c8788a 85%,#d89aa3 100%);
+    min-height:100svh;
+    font-family:'Outfit',sans-serif;
+    box-sizing:border-box;
+  }
+  .mh-photo{
+    position:absolute;
+    inset:0;
+    width:100%;
+    height:100%;
+    background:url('Untitled design.jpg') center 20%/cover no-repeat;
+    z-index:1;
+    animation:mhZoom 2.2s cubic-bezier(.16,1,.3,1) both;
+  }
+  .mh-photo::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background:linear-gradient(180deg,rgba(58,10,26,.72) 0%,rgba(90,22,40,.45) 40%,rgba(60,14,30,.6) 75%,rgba(40,6,18,.88) 100%);
+  }
+  @keyframes mhZoom{from{transform:scale(1.06)}to{transform:scale(1)}}
+
+  /* ---- animation utility ---- */
+  .mh-s .ld{
+    opacity:0;
+    transform:translateY(18px);
+    animation:mhFade .65s cubic-bezier(.16,1,.3,1) both;
+    animation-delay:calc(var(--n,0)*.14s + .2s);
+  }
+  @keyframes mhFade{to{opacity:1;transform:none}}
+
+  /* ---- logo ---- */
+  .mh-logo{
+    position:absolute;
+    top:24px;
+    left:20px;
+    z-index:10;
+    display:flex;
+    align-items:center;
+    gap:10px;
+    text-decoration:none;
+    color:#fff;
+  }
+  .mh-logo svg{
+    width:32px;
+    height:32px;
+    fill:none;
+    stroke:#fff;
+    stroke-width:1.4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    flex-shrink:0;
+  }
+  .mh-logo path:last-child{fill:#fff;stroke:none}
+  .mh-logo span{
+    display:flex;
+    flex-direction:column;
+    line-height:1.1;
+  }
+  .mh-logo b{
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.12em;
+    color:#fff;
+  }
+  .mh-logo small{
+    font-size:7.5px;
+    font-weight:400;
+    letter-spacing:.18em;
+    color:rgba(255,255,255,.75);
+    text-transform:uppercase;
+  }
+
+  /* ---- burger ---- */
+  .mh-burger{
+    position:absolute;
+    top:22px;
+    right:18px;
+    z-index:10;
+    width:40px;
+    height:40px;
+    border:none;
+    background:rgba(255,255,255,.12);
+    border-radius:10px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:5px;
+    cursor:pointer;
+    padding:0;
+    backdrop-filter:blur(6px);
+    -webkit-backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.2);
+    transition:background .25s;
+  }
+  .mh-burger i{
+    display:block;
+    width:18px;
+    height:1.8px;
+    background:#fff;
+    border-radius:2px;
+    transition:all .3s;
+  }
+  .mh-burger:hover{background:rgba(255,255,255,.22)}
+
+  /* ---- eyebrow ---- */
+  .mh-eyebrow{
+    position:absolute;
+    z-index:5;
+    top:clamp(160px,42vw,200px);
+    left:20px;
+    right:20px;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:.22em;
+    color:rgba(255,255,255,.8);
+    text-transform:uppercase;
+    margin:0;
+  }
+
+  /* ---- headline ---- */
+  .mh-h1{
+    position:absolute;
+    z-index:5;
+    top:clamp(185px,50vw,230px);
+    left:20px;
+    right:20px;
+    font-size:clamp(36px,11.5vw,54px);
+    font-weight:700;
+    line-height:1.05;
+    letter-spacing:-.02em;
+    color:#fff;
+    margin:0;
+    text-shadow:0 4px 24px rgba(0,0,0,.5);
+  }
+
+  /* ---- body copy + rule ---- */
+  .mh-copy{
+    position:absolute;
+    z-index:5;
+    top:clamp(360px,98vw,420px);
+    left:20px;
+    right:20px;
+    max-width:340px;
+  }
+  .mh-copy p{
+    font-size:13.5px;
+    font-weight:300;
+    line-height:1.58;
+    color:rgba(255,255,255,.86);
+    margin:0 0 14px;
+  }
+  .mh-rule{
+    display:block;
+    width:38px;
+    height:2px;
+    background:rgba(255,255,255,.55);
+    border-radius:2px;
+  }
+
+  /* ---- service pills ---- */
+  .mh-svc{
+    position:absolute;
+    z-index:5;
+    bottom:0;
+    left:0;
+    right:0;
+    display:flex;
+    gap:0;
+    background:rgba(255,255,255,.06);
+    backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-top:1px solid rgba(255,255,255,.15);
+    padding:14px 10px 18px;
+  }
+  .mh-svc .it{
+    flex:1;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:6px;
+    text-decoration:none;
+    color:#fff;
+    font-size:10px;
+    font-weight:500;
+    text-align:center;
+    line-height:1.3;
+    letter-spacing:.01em;
+    opacity:0;
+    transform:translateY(12px);
+    animation:mhFade .55s cubic-bezier(.16,1,.3,1) both;
+    animation-delay:calc(var(--d,0)*.1s + .7s);
+  }
+  .mh-svc .it:hover{opacity:.85}
+  .mh-svc .ring{
+    width:44px;
+    height:44px;
+    border-radius:50%;
+    display:grid;
+    place-items:center;
+    background:rgba(255,255,255,.13);
+    border:1px solid rgba(255,255,255,.3);
+    box-shadow:0 4px 14px rgba(0,0,0,.25);
+    transition:background .25s;
+  }
+  .mh-svc .it:hover .ring{background:rgba(255,255,255,.25)}
+  .mh-svc svg{
+    width:20px;
+    height:20px;
+    fill:none;
+    stroke:#fff;
+    stroke-width:1.4;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+  }
+  .mh-svc .t{fill:rgba(255,255,255,.15)}
+  .mh-svc .d{stroke:#fff}
+}
+/* Hide mobile hero on desktop / tablet */
+@media(min-width:768px){
+  #mobile-hero{display:none!important}
+}
 </style>
 </head>
 <body>
@@ -2849,6 +3089,64 @@ footer::before{
 <main>
 <!-- ============ PAGE: HOME ============ -->
 <section class="page" id="home">
+
+  <!-- ============ MOBILE-ONLY HERO (phones ≤767px) ============ -->
+  <section class="mh-s" id="mobile-hero" aria-label="Dental Oasis – Mobile Hero">
+    <div class="mh-photo" role="img" aria-label="Smiling woman holding a clear aligner"></div>
+
+    <!-- Logo -->
+    <a class="mh-logo ld" href="#home" style="--n:0" aria-label="Dental Oasis home">
+      <svg viewBox="2.5 2.5 18.5 20" aria-hidden="true">
+        <path d="M7 4C4.5 4 3 6 3 8.5c0 2 1 3.5 1.5 6C5 17.5 5.5 22 7.5 22c1.6 0 1.7-3 2.5-5 .3-.8 1.2-.8 1.5 0 .8 2 .9 5 2.5 5 2 0 2.5-4.5 3-7.5.5-2.5 1.5-4 1.5-6 0-1-.3-1.9-.8-2.6"/>
+        <path d="M14.5 7.5c1-2.8 3.3-4.4 6.3-4.5-.1 3.1-1.7 5.4-4.4 6.3-.9.3-1.4 0-1.9-.5z" fill="#fff"/>
+      </svg>
+      <span><b>DENTAL OASIS</b><small>HEALTHY SMILES HAPPIER LIVES</small></span>
+    </a>
+
+    <!-- Burger -->
+    <button class="mh-burger ld" id="mhBurger" style="--n:0" aria-label="Open menu" aria-expanded="false">
+      <i></i><i></i><i></i>
+    </button>
+
+    <!-- Headline copy -->
+    <p class="mh-eyebrow ld" style="--n:1">COMPLETE DENTAL SOLUTIONS</p>
+    <h1 class="mh-h1 ld" style="--n:2">Dental Care<br>For Lifetime<br>Confidence</h1>
+    <div class="mh-copy ld" style="--n:3">
+      <p>At Dental Oasis, we combine advanced technology, gentle care and a patient-first approach to give you and your family healthy, confident smiles for life.</p>
+      <i class="mh-rule"></i>
+    </div>
+
+    <!-- Treatment pills -->
+    <div class="mh-svc">
+      <a class="it" href="#treatments" style="--d:0">
+        <span class="ring">
+          <svg viewBox="0 0 24 24"><path class="t" d="M7 3C4.5 3 3 5 3 7.5c0 2 1 3.5 1.5 6C5 16.5 5.5 21 7.5 21c1.6 0 1.7-3 2.5-5 .3-.8 1.2-.8 1.5 0 .8 2 .9 5 2.5 5 2 0 2.5-4.5 3-7.5.5-2.5 1.5-4 1.5-6C18 5 16.5 3 14 3c-1.3 0-2 .6-3.5.6S8.3 3 7 3z"/><path class="d" d="M10.5 6.5v5M8 9h5"/></svg>
+        </span>General<br>Dentistry
+      </a>
+      <a class="it" href="#treatments" style="--d:1">
+        <span class="ring">
+          <svg viewBox="0 0 24 24"><path class="t" d="M7 3C4.5 3 3 5 3 7.5c0 2 1 3.5 1.5 6C5 16.5 5.5 21 7.5 21c1.6 0 1.7-3 2.5-5 .3-.8 1.2-.8 1.5 0 .8 2 .9 5 2.5 5 2 0 2.5-4.5 3-7.5.5-2.5 1.5-4 1.5-6C18 5 16.5 3 14 3c-1.3 0-2 .6-3.5.6S8.3 3 7 3z"/><path class="d" d="M5.5 9.5h13"/><rect class="d" x="8" y="7.8" width="3" height="3.4" rx=".6" fill="#fff"/><rect class="d" x="13" y="7.8" width="3" height="3.4" rx=".6" fill="#fff"/></svg>
+        </span>Orthodontics
+      </a>
+      <a class="it" href="#treatments" style="--d:2">
+        <span class="ring">
+          <svg viewBox="0 0 24 24"><path class="t" d="M8.5 2.5h7c.8 0 1.5.7 1.5 1.5v3.5A5 5 0 0112 12.5 5 5 0 017 7.5V4c0-.8.7-1.5 1.5-1.5z"/><path class="d" d="M8.5 14.5h7M9 17h6M9.8 19.5h4.4M11 22h2"/></svg>
+        </span>Dental<br>Implants
+      </a>
+      <a class="it" href="#treatments" style="--d:3">
+        <span class="ring">
+          <svg viewBox="0 0 24 24"><path class="t" d="M11 2.5l2.3 6.2 6.2 2.3-6.2 2.3L11 19.5l-2.3-6.2L2.5 11l6.2-2.3z"/><path class="d" d="M17.5 15c1.8.2 3 1.3 3.2 3"/></svg>
+        </span>Cosmetic<br>Dentistry
+      </a>
+      <a class="it" href="#treatments" style="--d:4">
+        <span class="ring">
+          <svg viewBox="0 0 24 24"><path class="t" d="M7 3C4.5 3 3 5 3 7.5c0 2 1 3.5 1.5 6C5 16.5 5.5 21 7.5 21c1.6 0 1.7-3 2.5-5 .3-.8 1.2-.8 1.5 0 .8 2 .9 5 2.5 5 2 0 2.5-4.5 3-7.5.5-2.5 1.5-4 1.5-6C18 5 16.5 3 14 3c-1.3 0-2 .6-3.5.6S8.3 3 7 3z"/><path class="d" d="M9.2 8.3c.6-.8 1.6-.5 1.6.4 0 .8-1.6 1.7-1.6 1.7S7.6 9.5 7.6 8.7c0-.9 1-1.2 1.6-.4zM14.2 8.3c.6-.8 1.6-.5 1.6.4 0 .8-1.6 1.7-1.6 1.7s-1.6-.9-1.6-1.7c0-.9 1-1.2 1.6-.4z" fill="#8a1c3e"/></svg>
+        </span>Pediatric<br>Dentistry
+      </a>
+    </div>
+  </section>
+  <!-- ============ END MOBILE HERO ============ -->
+
   <div class="hero">
     <div class="photo" role="img" aria-label="Smiling woman holding a clear aligner"></div>
     <svg class="wave" viewBox="0 0 2576 1438" preserveAspectRatio="none"><defs><linearGradient id="wg" x1="0" x2="1"><stop offset="0" stop-color="#6b1a34"/><stop offset=".5" stop-color="#7a2340"/><stop offset="1" stop-color="#74203b"/></linearGradient></defs>
