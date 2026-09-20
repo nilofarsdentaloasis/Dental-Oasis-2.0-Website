@@ -1,0 +1,191 @@
+<!-- ============================================================
+  DENTAL OASIS – "OUR TREATMENTS" 3D BOOK SECTION
+  Standalone: paste anywhere inside <body>.
+  ▸ Click a page to turn it (all pages before it turn too). Click the same page again, or anywhere outside, to close.
+  ▸ Edit the treatments in the TREATMENTS list at the bottom of the script.
+  ▸ Want real photos on the pages? Put an image URL in the `img` field of a treatment.
+============================================================= -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&display=swap">
+
+<section class="tr-s" id="treatments-book">
+  <div class="tr-head">
+    <span class="tr-eyebrow"><i></i>OUR TREATMENTS</span>
+    <h2>Care for <em>every smile</em></h2>
+  </div>
+
+  <div class="tr-type" aria-hidden="true"><span>Smile</span><span>Care</span></div>
+
+  <div class="galeria-book-3d" id="tr-book" style="--n:7"></div>
+
+  <p class="tr-hint"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 0114-5.300M20 12a8 8 0 01-14 5.300M18 3v4h-4M6 21v-4h4"/></svg>Click a page to turn it &nbsp;•&nbsp; the book returns to the cover after the last page</p>
+</section>
+
+<style>
+@property --page-rotate{syntax:"<angle>";inherits:true;initial-value:0deg}
+@property --spine-shift{syntax:"<length>";inherits:true;initial-value:0px}
+
+/* ---------- tokens: same maroon / rose palette as the site ---------- */
+.tr-s{
+  --m:#7a2140;--m2:#5f1830;--m3:#8b2e48;--p:#d98b96;--pl:#f7e7ea;--mut:#7d5a64;
+  --f:'Outfit','Segoe UI',system-ui,sans-serif;--ease:cubic-bezier(.2,.7,.2,1);
+  font-family:var(--f);color:var(--m2);position:relative;overflow:hidden;width:100%;
+  height:clamp(700px,100svh,900px);display:flex;justify-content:center;align-items:center;
+  perspective:1000px;transform-style:preserve-3d;
+  background:radial-gradient(circle at 1px 1px,rgba(122,33,64,.08) 1.5px,transparent 0) 0 0/26px 26px,
+    radial-gradient(60% 50% at 50% 55%,#fff 0,transparent 70%),linear-gradient(160deg,#fbe6ea,#f4d3da 55%,#efc4cd);
+}
+.tr-s *{box-sizing:border-box}
+
+/* heading + hint */
+.tr-head{position:absolute;top:44px;left:0;right:0;text-align:center;z-index:5;animation:trUp 1s var(--ease) both}
+.tr-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:.76rem;letter-spacing:.32em;font-weight:500;color:var(--m3);padding:8px 18px;border-radius:99px;background:rgba(255,255,255,.75);border:1px solid rgba(122,33,64,.15);box-shadow:inset 0 1px 0 #fff,0 6px 18px rgba(122,33,64,.08)}
+.tr-eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--m);animation:trPulse 2s infinite}
+.tr-head h2{font-weight:400;font-size:clamp(30px,3.8vw,52px);letter-spacing:-.02em;color:var(--m);margin:12px 0 0;line-height:1.1}
+.tr-head h2 em{font-style:normal;font-weight:500;background:linear-gradient(100deg,var(--m),#c25068 60%,var(--p));-webkit-background-clip:text;background-clip:text;color:transparent}
+.tr-hint{position:absolute;bottom:26px;left:0;right:0;text-align:center;z-index:5;font-size:.88rem;font-weight:300;color:var(--mut);display:flex;align-items:center;justify-content:center;gap:10px;padding:0 5vw}
+.tr-hint svg{width:18px;height:18px;flex:none;fill:none;stroke:var(--m);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;animation:trSpin 5s linear infinite}
+
+/* giant background words */
+.tr-type{position:absolute;top:54%;left:0;width:100%;translate:0 -50%;display:flex;justify-content:space-between;align-items:center;padding:0 5vw;pointer-events:none;z-index:0;
+  font-weight:800;font-size:clamp(4rem,14vw,14rem);line-height:.8;color:rgba(122,33,64,.3);letter-spacing:-.03em;text-shadow:0 2px 30px rgba(255,255,255,.5)}
+
+/* ---------- 3D book ---------- */
+.galeria-book-3d{--w:min(340px,42vw);--h:calc(var(--w)*1.235);font-size:calc(var(--w)/340*15.5px);
+  position:relative;width:var(--w);height:var(--h);margin-top:40px;perspective:1000px;transform-style:preserve-3d;display:flex;justify-content:center;align-items:center;z-index:10;
+  --spine-shift:0px;transform:translateX(var(--spine-shift));transition:--spine-shift .5s ease;animation:trRise 1.1s var(--ease) .2s both}
+.galeria-book-3d.book-open{--spine-shift:calc(var(--w)/2)}
+.galeria-book-3d::after{content:"";position:absolute;left:5%;right:-5%;bottom:-34px;height:26px;border-radius:50%;background:radial-gradient(closest-side,rgba(95,24,48,.35),transparent);filter:blur(6px);z-index:-1}
+.galeria-book-3d__item{position:absolute;width:var(--w);height:var(--h);perspective:1000px;transform-style:preserve-3d;display:flex;justify-content:center;align-items:center;
+  transform-origin:left center;--page-rotate:0deg;transform:rotateY(var(--page-rotate));
+  transition:--page-rotate .6s ease-in-out,z-index 0s;
+  transition-delay:calc((var(--n) - 1 - var(--i))*.1s),calc((var(--n) - 1 - var(--i))*.1s + .3s);
+  box-shadow:2px 2px 12px rgba(60,10,25,.28);cursor:pointer;z-index:calc(10 - var(--i));border-radius:2px 10px 10px 2px;outline-offset:4px}
+.galeria-book-3d__item:not(.is-open):hover{--page-rotate:-9deg;transition-delay:0s,0s}
+.galeria-book-3d__item.is-open{--page-rotate:-180deg;transition-delay:calc(var(--i)*.09s),0s;z-index:calc(20 + var(--i))}
+
+/* page faces */
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:2px 10px 10px 2px;overflow:hidden;padding:1.6em 1.5em;display:flex;flex-direction:column;background-size:cover;background-position:center}
+.face:nth-child(2){transform:rotateY(180deg) translateZ(1px);z-index:1;border-radius:10px 2px 2px 10px}
+.face.fv{color:#fff;align-items:center;text-align:center;justify-content:center;gap:.4em;background:linear-gradient(160deg,#8b2e48,#5f1830 90%);box-shadow:inset 10px 0 16px -10px rgba(0,0,0,.45)}
+.face.fv::before{content:"";position:absolute;inset:0;background:var(--img,none) center/cover;opacity:.22;mix-blend-mode:luminosity}
+.face.fv::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.16) 50%,transparent 65%);background-size:260% 100%;background-position:160% 0;animation:trShine 7s ease-in-out infinite}
+.face.fv>*{position:relative;z-index:1}
+.face.fv .no{position:absolute;top:.6em;right:.9em;font-size:3.6em;font-weight:800;line-height:1;color:rgba(255,255,255,.1)}
+.ring{width:7.4em;height:7.4em;border-radius:50%;display:grid;place-items:center;margin-bottom:.6em;background:linear-gradient(135deg,rgba(255,255,255,.28),rgba(255,255,255,.08));border:1px solid rgba(255,255,255,.4);box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 1em 2em rgba(40,0,20,.35);animation:trFloat 5s ease-in-out infinite}
+.ring svg{width:3.9em;height:3.9em;fill:none;stroke:#fff;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.fv h4{font-weight:500;font-size:1.55em;line-height:1.15;margin:0}
+.fv p{font-weight:300;font-size:.86em;color:#f5d9df;margin:0;max-width:16em}
+.tap{margin-top:1.1em;font-size:.72em;letter-spacing:.2em;text-transform:uppercase;padding:.6em 1.2em;border-radius:99px;border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12)}
+
+.face.bk{background:linear-gradient(200deg,#fffafb,#f7e7ea);box-shadow:inset -10px 0 16px -10px rgba(122,33,64,.4);color:var(--m2);justify-content:flex-start;gap:.5em}
+.bk .eb{font-size:.68em;letter-spacing:.24em;text-transform:uppercase;color:var(--m3);font-weight:500}
+.bk h5{font-weight:500;font-size:1.5em;line-height:1.15;color:var(--m);margin:0}
+.bk .tx{font-size:.84em;font-weight:300;color:var(--mut);line-height:1.5;margin:0 0 .3em}
+.bk ul{list-style:none;padding:0;margin:0;display:grid;gap:.5em;font-size:.82em}
+.bk li{position:relative;padding-left:1.9em;line-height:1.35}
+.bk li::before{content:"✓";position:absolute;left:0;top:0;width:1.35em;height:1.35em;border-radius:50%;background:var(--m);color:#fff;font-size:.8em;display:grid;place-items:center}
+.meta{display:flex;gap:1.4em;margin-top:auto;padding-top:.7em;border-top:1px solid rgba(122,33,64,.15)}
+.meta b{display:block;font-size:1.05em;font-weight:500;color:var(--m)}.meta span{font-size:.68em;color:var(--mut)}
+.lnk{margin-top:.7em;display:inline-flex;align-items:center;justify-content:center;gap:.5em;padding:.75em 1em;border-radius:99px;background:linear-gradient(135deg,var(--m3),var(--m));color:#fff;text-decoration:none;font-size:.82em;font-weight:500;transition:.3s var(--ease)}
+.lnk:hover{transform:translateY(-3px);box-shadow:0 .8em 1.4em rgba(122,33,64,.35)}
+
+/* cover, contents, CTA, back cover */
+.face.cover{color:#fff;align-items:center;justify-content:center;text-align:center;gap:.5em;background:linear-gradient(150deg,#a13c58,#7a2140 45%,#4f1228);box-shadow:inset 12px 0 18px -10px rgba(0,0,0,.5)}
+.face.cover::before{content:"";position:absolute;inset:.8em;border:1px solid rgba(255,255,255,.35);border-radius:6px 14px 14px 6px}
+.face.cover svg{width:4.6em;height:4.6em;fill:none;stroke:#fff;stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+.cover small{letter-spacing:.3em;font-size:.68em;font-weight:300;text-transform:uppercase}
+.cover h3{font-weight:400;font-size:2em;line-height:1.05;margin:0;letter-spacing:-.01em}
+.cover h3 b{font-weight:600;display:block}
+.toc{list-style:none;padding:0;margin:.4em 0 0;display:grid;gap:.5em;font-size:.86em}
+.toc li{display:flex;align-items:center;gap:.8em;padding:.55em .8em;border-radius:.8em;background:#fff;box-shadow:0 2px 8px rgba(122,33,64,.08)}
+.toc b{width:1.9em;height:1.9em;border-radius:50%;background:var(--pl);color:var(--m);display:grid;place-items:center;font-size:.8em}
+.face.cta{align-items:center;text-align:center;justify-content:center;background:linear-gradient(200deg,#fffafb,#f7e7ea);box-shadow:inset 10px 0 16px -10px rgba(122,33,64,.35);gap:.6em}
+.cta h5{font-weight:500;font-size:1.6em;color:var(--m);margin:0;line-height:1.15}
+.cta p{font-size:.86em;color:var(--mut);font-weight:300;margin:0 0 .6em}
+.face.end{background:linear-gradient(150deg,#7a2140,#4f1228);color:#fff;align-items:center;justify-content:center;font-size:.9em}
+.end svg{width:4em;height:4em;fill:none;stroke:rgba(255,255,255,.7);stroke-width:1.1;stroke-linecap:round;stroke-linejoin:round}
+
+@keyframes trUp{from{opacity:0;translate:0 30px}}
+@keyframes trRise{from{opacity:0;translate:0 70px}}
+@keyframes trFloat{50%{transform:translateY(-.45em)}}
+@keyframes trShine{0%,55%{background-position:160% 0}100%{background-position:-60% 0}}
+@keyframes trPulse{0%{box-shadow:0 0 0 0 rgba(122,33,64,.5)}70%,100%{box-shadow:0 0 0 10px rgba(122,33,64,0)}}
+@keyframes trSpin{to{transform:rotate(360deg)}}
+@media(max-width:600px){.tr-s{height:clamp(640px,100svh,800px)}.galeria-book-3d{--w:min(340px,40vw)}.tr-head{top:30px}}
+@media(prefers-reduced-motion:reduce){.tr-s *,.tr-s *::before,.tr-s *::after{animation:none!important}}
+</style>
+
+<script>
+(() => {
+  /* ============ EDIT YOUR TREATMENTS HERE (add / remove objects; the book adapts) ============ */
+  const TREATMENTS = [
+    { ic:'tooth', name:'General Dentistry', tag:'Check-ups, cleaning & fillings', img:'',
+      text:'Routine care that keeps small problems small and your whole mouth healthy.',
+      pts:['Digital check-up & X-rays','Scaling, polishing & gum care','Tooth-coloured fillings'], meta:[['30–45 min','Per visit'],['6 months','Recommended']] },
+    { ic:'brace', name:'Orthodontics', tag:'Braces & clear aligners', img:'',
+      text:'Straighter teeth and a better bite with discreet aligners or modern braces.',
+      pts:['3D scan & smile preview','Clear aligners or braces','Regular progress check-ins'], meta:[['6–24 mo','Treatment'],['All ages','Suitable']] },
+    { ic:'impl', name:'Dental Implants', tag:'Permanent tooth replacement', img:'',
+      text:'Natural-looking replacement teeth anchored securely in the jaw.',
+      pts:['Titanium implant post','Custom-made crown','Comfortable, guided placement'], meta:[['3–6 mo','To complete'],['Lasting','Results']] },
+    { ic:'spark', name:'Cosmetic Dentistry', tag:'Whitening, veneers & smile design', img:'',
+      text:'Design the smile you have always wanted, previewed before we begin.',
+      pts:['Professional teeth whitening','Porcelain veneers','Digital smile design'], meta:[['1–2 visits','Typical'],['Natural','Finish']] },
+    { ic:'kid', name:'Pediatric Dentistry', tag:'Gentle, playful care for kids', img:'',
+      text:'Short, friendly visits that build healthy habits and happy smiles.',
+      pts:['Fluoride & sealants','Child-friendly clinic space','Habit guidance for parents'], meta:[['20–30 min','Per visit'],['Ages 2+','Welcome']] }
+  ];
+
+  /* ============ builds the pages ============ */
+  const TOOTH='M7 3C4.500 3 3 5 3 7.500c0 2 1 3.500 1.500 6C5 16.500 5.500 21 7.500 21c1.600 0 1.700-3 2.500-5 .3-.8 1.200-.8 1.500 0 .8 2 .9 5 2.500 5 2 0 2.500-4.500 3-7.500.5-2.500 1.500-4 1.500-6C18 5 16.500 3 14 3c-1.300 0-2 .6-3.500.6S8.300 3 7 3z';
+  const ICON={
+    tooth:`<path d="${TOOTH}"/>`,
+    brace:`<path d="${TOOTH}"/><path d="M6 10h10M9 8v4M13 8v4"/>`,
+    impl:`<path d="M8 3h8v8c0 2-1.500 3-4 3s-4-1-4-3zM9.500 16h5M10 18.500h4M11 21h2"/>`,
+    spark:`<path d="M12 3l2 6 6 3-6 3-2 6-2-6-6-3 6-3zM19 3v3M17.500 4.500h3"/>`,
+    kid:`<path d="${TOOTH}"/><path d="M8.500 9c1 1 2 1 3 0M12.500 9c1 1 2 1 3 0"/>`
+  };
+  const svg = k => `<svg viewBox="0 0 24 24">${ICON[k]}</svg>`;
+  const T = TREATMENTS, pad = n => String(n).padStart(2,'0');
+
+  const visual = (t,i) => `<div class="face fv" style="${t.img?`--img:url('${t.img}')`:''}"><span class="no">${pad(i+1)}</span><div class="ring">${svg(t.ic)}</div><h4>${t.name}</h4><p>${t.tag}</p><span class="tap">Turn page</span></div>`;
+  const detail = (t,i) => `<div class="face bk"><span class="eb">Treatment ${pad(i+1)}</span><h5>${t.name}</h5><p class="tx">${t.text}</p><ul>${t.pts.map(p=>`<li>${p}</li>`).join('')}</ul><div class="meta">${t.meta.map(m=>`<div><b>${m[0]}</b><span>${m[1]}</span></div>`).join('')}</div><a class="lnk" href="#contact">Book this treatment →</a></div>`;
+
+  const pages = [
+    // cover + contents
+    [`<div class="face cover"><svg viewBox="0 0 24 24">${ICON.tooth}</svg><small>Dental Oasis</small><h3>Our<b>Treatments</b></h3><small>Healthy smiles · Happier lives</small></div>`,
+     `<div class="face bk"><span class="eb">What we offer</span><h5>Complete care, one clinic</h5><p class="tx">Turn the page to explore each treatment.</p><ul class="toc">${T.map((t,i)=>`<li><b>${pad(i+1)}</b>${t.name}</li>`).join('')}</ul></div>`],
+    // one leaf per treatment: front = visual, back = details
+    ...T.map((t,i)=>[visual(t,i),detail(t,i)]),
+    // call-to-action + back cover
+    [`<div class="face cta"><h5>Ready for a healthier smile?</h5><p>Book a visit and we’ll confirm your slot within the hour.</p><a class="lnk" href="#contact">Book Appointment →</a></div>`,
+     `<div class="face end"><svg viewBox="0 0 24 24">${ICON.tooth}</svg></div>`]
+  ];
+
+  const book = document.getElementById('tr-book');
+  book.style.setProperty('--n', pages.length);
+  book.innerHTML = pages.map((p,i)=>`<div class="galeria-book-3d__item" style="--i:${i}" tabindex="0" role="button" aria-label="Turn page ${i+1}">${p[0]}${p[1]}</div>`).join('');
+
+  /* ============ behaviour: pages turn in order, like a real book ============ */
+  const items = [...book.querySelectorAll('.galeria-book-3d__item')];
+  const sync = () => book.classList.toggle('book-open', items.some(i => i.classList.contains('is-open')));
+  let backT;
+  const closeAll = () => { clearTimeout(backT); items.forEach(it => it.classList.remove('is-open')); sync(); };
+  const toggle = i => {
+    clearTimeout(backT);
+    const opening = !items[i].classList.contains('is-open');
+    items.forEach((it,j) => { if (opening ? j <= i : j >= i) it.classList.toggle('is-open', opening); });
+    sync();
+    /* last page turned → pause a moment, then the book returns to the cover */
+    if (opening && i === items.length - 1) backT = setTimeout(closeAll, 2200);
+  };
+  items.forEach((it,i) => {
+    it.addEventListener('click', e => { e.stopPropagation(); if (e.target.closest('a')) return; toggle(i); });
+    it.addEventListener('keydown', e => { if (e.key==='Enter' || e.key===' ') { e.preventDefault(); toggle(i); } });
+  });
+  document.addEventListener('click', e => {           // click outside the book closes it
+    if (e.target.closest('#tr-book')) return;
+    closeAll();
+  });
+})();
+</script>

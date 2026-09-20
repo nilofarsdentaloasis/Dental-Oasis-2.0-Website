@@ -1,0 +1,1559 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Gallery | The Concept — Interior Design Studio</title>
+    <meta name="description" content="Explore The Concept's curated gallery of minimalist interior spaces, architectural photography, and design inspirations from our portfolio of luxury projects."/>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Be+Vietnam+Pro:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+              "surface": "#FAF8F5",
+              "surface-dim": "#EBE6DC",
+              "surface-bright": "#FAF8F5",
+              "surface-container": "#EDE8DC",
+              "surface-container-high": "#E7E1D3",
+              "surface-container-highest": "#DFD8C8",
+              "surface-container-low": "#F4F0E6",
+              "surface-container-lowest": "#FAF8F5",
+              "surface-variant": "#DFD8C8",
+              "on-surface": "#1B1917",
+              "on-surface-variant": "#554F43",
+              "on-primary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-tertiary": "#ffffff",
+              "primary": "#181919",
+              "primary-container": "#2d2d2d",
+              "primary-fixed": "#e4e2e1",
+              "primary-fixed-dim": "#c8c6c6",
+              "inverse-primary": "#c8c6c6",
+              "secondary": "#7c5730",
+              "secondary-container": "#fdcb9b",
+              "secondary-fixed": "#ffdcbd",
+              "secondary-fixed-dim": "#eebd8e",
+              "on-secondary-container": "#79542d",
+              "on-secondary-fixed": "#2c1600",
+              "on-secondary-fixed-variant": "#61401b",
+              "tertiary": "#171911",
+              "tertiary-container": "#2c2e24",
+              "tertiary-fixed": "#e3e3d5",
+              "tertiary-fixed-dim": "#c7c7ba",
+              "on-tertiary-fixed": "#1b1c14",
+              "on-tertiary-fixed-variant": "#46483d",
+              "on-tertiary-container": "#949589",
+              "outline": "#7C7362",
+              "outline-variant": "#C8BFAC",
+              "background": "#FAF8F5",
+              "on-background": "#1B1917",
+              "error": "#ba1a1a",
+              "error-container": "#ffdad6",
+              "on-error": "#ffffff",
+              "on-error-container": "#93000a",
+              "inverse-surface": "#2f3130",
+              "inverse-on-surface": "#f1f1ef",
+              "surface-tint": "#5f5e5e"
+            },
+            "borderRadius": {
+              "DEFAULT": "0.25rem",
+              "lg": "0.5rem",
+              "xl": "0.75rem",
+              "full": "9999px"
+            },
+            "spacing": {
+              "margin-desktop": "80px",
+              "margin-mobile": "24px",
+              "stack-xl": "72px",
+              "container-max": "1440px",
+              "stack-md": "44px",
+              "unit": "8px",
+              "gutter": "32px"
+            },
+            "fontFamily": {
+              "display-lg-mobile": ["Playfair Display", "serif"],
+              "label-caps": ["Montserrat", "sans-serif"],
+              "headline-md": ["Playfair Display", "serif"],
+              "body-lg": ["Montserrat", "sans-serif"],
+              "display-lg": ["Playfair Display", "serif"],
+              "headline-sm": ["Playfair Display", "serif"],
+              "body-md": ["Montserrat", "sans-serif"]
+            },
+            "fontSize": {
+              "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+              "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "600"}],
+              "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+              "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "300"}],
+              "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+              "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+              "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* ==============================
+           GLOBAL BASE
+           ============================== */
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #FAF8F5;
+            color: #1B1917;
+            overflow-x: hidden;
+        }
+
+        /* Typography Helpers */
+        .font-serif-luxury { font-family: 'Playfair Display', serif; }
+        .font-headline-lg { font-family: 'Playfair Display', serif; font-weight: 700; letter-spacing: -0.02em; }
+        .font-headline-md { font-family: 'Playfair Display', serif; font-weight: 600; letter-spacing: -0.01em; }
+        .font-headline-sm { font-family: 'Playfair Display', serif; font-weight: 600; }
+        .font-label-caps { font-family: 'Montserrat', sans-serif; letter-spacing: 0.15em; text-transform: uppercase; }
+        .font-body-lg { font-family: 'Montserrat', sans-serif; font-size: 1.125rem; line-height: 1.75; font-weight: 300; }
+        .font-body-md { font-family: 'Montserrat', sans-serif; font-size: 0.95rem; line-height: 1.6; font-weight: 400; }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 6px; height: 6px; }
+        ::-webkit-scrollbar-track { background: #FAF8F5; }
+        ::-webkit-scrollbar-thumb { background: #C8BFAC; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #7c5730; }
+
+        /* ==============================
+           GLASS NAV
+           ============================== */
+        .glass-3d {
+            background: rgba(250, 248, 245, 0.78);
+            backdrop-filter: blur(20px) saturate(130%);
+            -webkit-backdrop-filter: blur(20px) saturate(130%);
+            border: 1px solid rgba(215, 207, 192, 0.65);
+            box-shadow:
+                0 12px 32px -8px rgba(45, 38, 28, 0.07),
+                0 4px 12px -2px rgba(45, 38, 28, 0.04),
+                inset 0 1px 1px 0 rgba(255, 255, 255, 0.5),
+                inset 0 -1px 1px 0 rgba(180, 170, 155, 0.15);
+            transition: background 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+                        border-color 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+                        box-shadow 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .header-dark .glass-3d {
+            background: rgba(12, 12, 12, 0.88) !important;
+            backdrop-filter: blur(24px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.18) !important;
+            box-shadow:
+                0 24px 48px -10px rgba(0, 0, 0, 0.55),
+                0 8px 20px -4px rgba(0, 0, 0, 0.4),
+                inset 0 1.5px 1px 0 rgba(255, 255, 255, 0.35),
+                inset 0 -1.5px 2px 0 rgba(0, 0, 0, 0.75),
+                inset 0 0 16px 0 rgba(255, 255, 255, 0.05) !important;
+        }
+
+        /* Logo Color Rules */
+        .logo-light-img { transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1); opacity: 1; }
+        .logo-dark-img { transition: opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1); opacity: 0; }
+        #header-logo.logo-on-dark .logo-light-img, .logo-on-dark .logo-light-img { opacity: 0 !important; }
+        #header-logo.logo-on-dark .logo-dark-img, .logo-on-dark .logo-dark-img { opacity: 1 !important; }
+        #header-logo.logo-on-light .logo-light-img, .logo-on-light .logo-light-img { opacity: 1 !important; }
+        #header-logo.logo-on-light .logo-dark-img, .logo-on-light .logo-dark-img { opacity: 0 !important; }
+
+        /* Nav Links */
+        .nav-link {
+            transition: color 1.2s cubic-bezier(0.25, 1, 0.5, 1), opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+        .header-dark .nav-link { color: rgba(255, 255, 255, 0.65) !important; }
+        .header-dark .nav-link:hover { color: #ffffff !important; }
+        .header-dark .nav-link.nav-active { color: #ffffff !important; }
+
+        /* Mobile Nav */
+        #mobileMenuBtn {
+            transition: color 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+                        background 1.2s cubic-bezier(0.25, 1, 0.5, 1),
+                        border-color 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+        .header-dark #mobileMenuBtn { color: #ffffff !important; }
+        .mobile-nav-link {
+            transition: color 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+            text-decoration: none !important;
+            border-bottom: none !important;
+        }
+        .header-dark .mobile-nav-link { color: rgba(255, 255, 255, 0.7) !important; }
+        .header-dark .mobile-nav-link:hover { color: #ffffff !important; }
+        .header-dark .mobile-nav-link.mobile-nav-active { color: #ffffff !important; }
+
+        /* ==============================
+           SCROLL REVEAL
+           ============================== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        .reveal-delay-1 { transition-delay: 0.08s; }
+        .reveal-delay-2 { transition-delay: 0.16s; }
+        .reveal-delay-3 { transition-delay: 0.24s; }
+        .reveal-delay-4 { transition-delay: 0.32s; }
+        .reveal-delay-5 { transition-delay: 0.40s; }
+
+        /* ==============================
+           GALLERY HERO SECTION
+           ============================== */
+        .gallery-hero {
+            padding-top: 140px;
+            padding-bottom: 0;
+            border-bottom: 1px solid #D1C9BA;
+            background: #FAF8F5;
+        }
+
+        .gallery-hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(48px, 12vw, 160px);
+            font-weight: 400;
+            letter-spacing: -0.03em;
+            line-height: 0.9;
+            color: #1B1917;
+        }
+
+        /* ==============================
+           EDITORIAL GRID SYSTEM
+           (Matches video: border grid lines)
+           ============================== */
+        .editorial-container {
+            max-width: 1440px;
+            margin: 0 auto;
+        }
+
+        /* Outer border frame */
+        .grid-frame {
+            border-left: 1px solid #D1C9BA;
+            border-right: 1px solid #D1C9BA;
+        }
+
+        /* Filter Bar */
+        .filter-bar {
+            border-top: 1px solid #D1C9BA;
+            border-bottom: 1px solid #D1C9BA;
+            display: flex;
+            align-items: center;
+            gap: 0;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .filter-bar::-webkit-scrollbar { display: none; }
+
+        .filter-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #554F43;
+            padding: 16px 28px;
+            border-right: 1px solid #D1C9BA;
+            white-space: nowrap;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            background: transparent;
+            border-top: none;
+            border-bottom: 3px solid transparent;
+        }
+        .filter-btn:hover { color: #1B1917; background: #F4F0E6; }
+        .filter-btn.active {
+            color: #1B1917;
+            border-bottom-color: #1B1917;
+            background: #FAF8F5;
+        }
+
+        /* Main grid row */
+        .grid-row {
+            display: grid;
+            border-bottom: 1px solid #D1C9BA;
+        }
+        .grid-row-3 { grid-template-columns: 1fr 1fr 1fr; }
+        .grid-row-2-1 { grid-template-columns: 2fr 1fr; }
+        .grid-row-1-2 { grid-template-columns: 1fr 2fr; }
+        .grid-row-quote-2 { grid-template-columns: 1fr 2fr; }
+
+        /* Grid cell */
+        .grid-cell {
+            border-right: 1px solid #D1C9BA;
+            position: relative;
+        }
+        .grid-cell:last-child { border-right: none; }
+
+        /* ==============================
+           GALLERY CARD
+           ============================== */
+        .gallery-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        /* Card top header bar (category + date) */
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            border-bottom: 1px solid #D1C9BA;
+            flex-shrink: 0;
+        }
+        .card-category {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: #7c5730;
+        }
+        .card-date {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 400;
+            color: #7C7362;
+        }
+
+        /* Card image wrapper */
+        .card-img-wrap {
+            overflow: hidden;
+            flex-shrink: 0;
+            background: #EDE8DC;
+        }
+        .card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gallery-card:hover .card-img-wrap img {
+            transform: scale(1.05);
+        }
+
+        /* Card body content */
+        .card-body {
+            padding: 24px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 18px;
+            font-weight: 600;
+            line-height: 1.3;
+            color: #1B1917;
+            transition: color 0.3s ease;
+        }
+        .gallery-card:hover .card-title { color: #7c5730; }
+        .card-excerpt {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 13px;
+            font-weight: 300;
+            line-height: 1.65;
+            color: #554F43;
+        }
+        .card-link {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #7c5730;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-top: auto;
+            transition: gap 0.3s ease;
+        }
+        .gallery-card:hover .card-link { gap: 10px; }
+
+        /* Large card (2/3 width) */
+        .card-img-lg { height: 340px; }
+        /* Medium card (1/3 width, smaller image) */
+        .card-img-md { height: 260px; }
+        /* Small card */
+        .card-img-sm { height: 220px; }
+
+        /* Mobile: 2-column card grid for tablets */
+        @media (min-width: 480px) and (max-width: 900px) {
+            .grid-row-3 { grid-template-columns: 1fr 1fr !important; }
+            .grid-row-3 .grid-cell:nth-child(3) {
+                grid-column: span 2;
+                border-right: none !important;
+                border-bottom: none !important;
+            }
+        }
+
+        /* ==============================
+           QUOTE BLOCK (Editorial)
+           ============================== */
+        .quote-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 56px 48px;
+            background: #FAF8F5;
+            height: 100%;
+        }
+        .quote-mark {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(60px, 15vw, 120px);
+            line-height: 0.6;
+            color: #D1C9BA;
+            font-weight: 700;
+            margin-bottom: 24px;
+            user-select: none;
+        }
+        .quote-text {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(16px, 2.5vw, 28px);
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.45;
+            color: #1B1917;
+            letter-spacing: -0.01em;
+        }
+        .quote-author {
+            margin-top: 24px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #7c5730;
+        }
+
+        /* ==============================
+           FEATURE PROMO CARD
+           ============================== */
+        .promo-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+            cursor: pointer;
+            min-height: 420px;
+        }
+        .promo-card img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .promo-card:hover img { transform: scale(1.04); }
+        .promo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0.1) 100%);
+        }
+        .promo-content {
+            position: relative;
+            z-index: 2;
+            padding: 48px 32px;
+            width: 100%;
+        }
+        .promo-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 12px;
+        }
+        .promo-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(22px, 3vw, 36px);
+            font-weight: 600;
+            color: #ffffff;
+            line-height: 1.25;
+            margin-bottom: 24px;
+        }
+        .promo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FAF8F5;
+            color: #1B1917;
+            padding: 14px 32px;
+            border-radius: 999px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            text-decoration: none;
+        }
+        .promo-btn:hover {
+            background: #1B1917;
+            color: #FAF8F5;
+            transform: scale(1.04);
+        }
+
+        /* ==============================
+           SOCIAL FOLLOW BLOCK
+           ============================== */
+        .social-block {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 48px 32px;
+            gap: 24px;
+            text-align: center;
+            height: 100%;
+        }
+        .social-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #554F43;
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            align-items: center;
+        }
+        .social-icon-link {
+            width: 42px;
+            height: 42px;
+            border: 1px solid #D1C9BA;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #554F43;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .social-icon-link:hover {
+            background: #1B1917;
+            color: #ffffff;
+            border-color: #1B1917;
+            transform: scale(1.1);
+        }
+        .social-icon-link svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        /* ==============================
+           COUNT / STATS BANNER
+           ============================== */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #D1C9BA;
+            border-bottom: 1px solid #D1C9BA;
+        }
+        .stat-cell {
+            padding: 40px 32px;
+            border-right: 1px solid #D1C9BA;
+            text-align: center;
+        }
+        .stat-cell:last-child { border-right: none; }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(36px, 8vw, 52px);
+            font-weight: 400;
+            color: #1B1917;
+            line-height: 1;
+        }
+        .stat-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 9px;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #554F43;
+            margin-top: 8px;
+        }
+
+        /* ==============================
+           LIGHTBOX
+           ============================== */
+        #lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0,0,0,0.92);
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+        }
+        #lightbox.open { display: flex; }
+        #lightbox-img {
+            max-width: 96vw;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 4px;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            user-select: none;
+        }
+        #lightbox-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            color: #fff;
+            font-size: 32px;
+            cursor: pointer;
+            line-height: 1;
+            opacity: 0.7;
+            transition: opacity 0.2s;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(4px);
+            z-index: 10;
+        }
+        #lightbox-close:hover { opacity: 1; background: rgba(255,255,255,0.2); }
+        #lightbox-caption {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.65);
+            white-space: nowrap;
+            max-width: 90vw;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            text-align: center;
+        }
+        #lightbox-prev, #lightbox-next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #fff;
+            font-size: 42px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: opacity 0.2s, transform 0.2s;
+            user-select: none;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(4px);
+        }
+        #lightbox-prev:hover, #lightbox-next:hover { opacity: 1; background: rgba(255,255,255,0.2); }
+        #lightbox-prev { left: 12px; }
+        #lightbox-next { right: 12px; }
+        #lightbox-prev:hover { transform: translateY(-50%) translateX(-3px); }
+        #lightbox-next:hover { transform: translateY(-50%) translateX(3px); }
+
+        /* Lightbox swipe hint dots */
+        #lightbox-dots {
+            position: absolute;
+            bottom: 48px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            gap: 6px;
+            align-items: center;
+        }
+        @media (max-width: 640px) {
+            #lightbox-dots { display: flex; }
+            #lightbox-prev, #lightbox-next {
+                width: 40px;
+                height: 40px;
+                font-size: 28px;
+                opacity: 0.65;
+            }
+            #lightbox-prev { left: 8px; }
+            #lightbox-next { right: 8px; }
+            #lightbox-caption { bottom: 14px; font-size: 9px; }
+        }
+
+        /* ==============================
+           HERO TITLE ANIMATION
+           ============================== */
+        .hero-char {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .hero-char.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* ==============================
+           CARD FILTER HIDE/SHOW
+           ============================== */
+        .gallery-card-wrap {
+            transition: opacity 0.4s ease, transform 0.4s ease;
+        }
+        .gallery-card-wrap.hidden-card {
+            opacity: 0;
+            transform: scale(0.96);
+            pointer-events: none;
+        }
+
+        /* Mobile Responsive — Tablet (≤900px) */
+        @media (max-width: 900px) {
+            .gallery-hero { padding-top: 100px; }
+            .grid-row-3 { grid-template-columns: 1fr 1fr; }
+            .grid-row-2-1 { grid-template-columns: 1fr; }
+            .grid-row-1-2 { grid-template-columns: 1fr; }
+            .grid-row-quote-2 { grid-template-columns: 1fr; }
+            .stats-row { grid-template-columns: repeat(3, 1fr); }
+            .stat-cell { padding: 28px 16px; }
+            .grid-cell { border-right: 1px solid #D1C9BA; border-bottom: none; }
+            .grid-cell:last-child { border-right: none; }
+            /* For grids that collapse to 1 col */
+            .grid-row-2-1 .grid-cell,
+            .grid-row-1-2 .grid-cell,
+            .grid-row-quote-2 .grid-cell {
+                border-right: none;
+                border-bottom: 1px solid #D1C9BA;
+            }
+            .grid-row-2-1 .grid-cell:last-child,
+            .grid-row-1-2 .grid-cell:last-child,
+            .grid-row-quote-2 .grid-cell:last-child { border-bottom: none; }
+            .gallery-hero-title { font-size: clamp(48px, 13vw, 110px); }
+            .quote-block { padding: 36px 28px; }
+            .social-icons { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+            .card-img-lg { height: 280px; }
+            .card-img-md { height: 220px; }
+            .card-img-sm { height: 180px; }
+            .promo-card { min-height: 360px; }
+        }
+
+        /* Mobile Responsive — Phone (≤640px) */
+        @media (max-width: 640px) {
+            .gallery-hero { padding-top: 88px; }
+            .gallery-hero-title { font-size: clamp(44px, 14vw, 80px); }
+            .filter-btn { padding: 13px 14px; font-size: 9px; letter-spacing: 0.15em; }
+            .card-body { padding: 16px; gap: 8px; }
+            .card-header { padding: 10px 16px; }
+            .card-title { font-size: 15px; }
+            .card-excerpt { font-size: 12px; }
+            .grid-row-3 { grid-template-columns: 1fr; }
+            .grid-row-3 .grid-cell { border-right: none; border-bottom: 1px solid #D1C9BA; }
+            .grid-row-3 .grid-cell:last-child { border-bottom: none; }
+            .card-img-lg { height: 240px; }
+            .card-img-md { height: 200px; }
+            .card-img-sm { height: 170px; }
+            .quote-block { padding: 32px 20px; }
+            .quote-mark { font-size: 64px; margin-bottom: 16px; }
+            .stat-cell { padding: 24px 12px; }
+            .promo-card { min-height: 300px; }
+            .promo-content { padding: 32px 20px; }
+            .social-block { padding: 36px 20px; gap: 20px; }
+            .social-icons { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 12px; }
+        }
+
+        /* Extra small phones (≤375px) */
+        @media (max-width: 375px) {
+            .gallery-hero { padding-top: 80px; }
+            .filter-btn { padding: 12px 10px; font-size: 8px; letter-spacing: 0.1em; }
+            .card-img-md { height: 180px; }
+            .card-img-sm { height: 150px; }
+            .stat-cell { padding: 20px 8px; }
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface overflow-x-hidden selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+
+    <!-- ==================
+         HEADER
+         ================== -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-50 pointer-events-none pt-4 md:pt-6 transition-all duration-1000">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop flex items-center justify-between relative">
+
+            <!-- Logo -->
+            <a id="header-logo" href="index.html" class="pointer-events-auto relative flex items-center group cursor-pointer h-10 sm:h-11 md:h-12" title="The Concept Home">
+                <img src="assets/the_concept_logo_dark.png" alt="The Concept" class="logo-light-img h-9 sm:h-10 md:h-11 w-auto object-contain transition-transform duration-300 group-hover:scale-105">
+                <img src="assets/the_concept_logo_white.png" alt="The Concept" class="logo-dark-img absolute left-0 top-1/2 -translate-y-1/2 h-9 sm:h-10 md:h-11 w-auto object-contain pointer-events-none">
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav id="header-nav" class="pointer-events-auto hidden md:flex items-center gap-8 glass-3d px-8 py-3 rounded-full md:absolute md:left-1/2 md:-translate-x-1/2 transition-transform duration-300 hover:scale-[1.02]">
+                <a class="nav-link font-label-caps font-bold text-on-surface-variant hover:text-primary text-xs tracking-widest uppercase transition-colors" href="index.html">Studio</a>
+                <a class="nav-link font-label-caps font-bold text-on-surface-variant hover:text-primary text-xs tracking-widest uppercase transition-colors" href="spaces.html">Spaces</a>
+                <a class="nav-link font-label-caps font-bold text-on-surface-variant hover:text-primary text-xs tracking-widest uppercase transition-colors" href="philosophy.html">Philosophy</a>
+                <a class="nav-link font-label-caps font-bold text-on-surface-variant hover:text-primary text-xs tracking-widest uppercase transition-colors" href="contact.html">Contact</a>
+                <a class="nav-link nav-active font-label-caps font-bold text-primary text-xs tracking-widest uppercase transition-colors" href="gallery.html">Gallery</a>
+            </nav>
+
+            <!-- Mobile Toggle -->
+            <button id="mobileMenuBtn" class="md:hidden pointer-events-auto glass-3d p-2.5 rounded-full text-primary focus:outline-none" aria-label="Toggle navigation menu">
+                <span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden pointer-events-auto px-6 pt-3">
+            <div class="glass-3d rounded-2xl p-6 max-w-xs ml-auto shadow-2xl">
+                <nav class="flex flex-col gap-4 font-label-caps font-bold text-xs tracking-wider uppercase">
+                    <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-1.5 transition-colors" href="index.html">Studio</a>
+                    <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-1.5 transition-colors" href="spaces.html">Spaces</a>
+                    <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-1.5 transition-colors" href="philosophy.html">Philosophy</a>
+                    <a class="mobile-nav-link text-on-surface-variant hover:text-primary py-1.5 transition-colors" href="contact.html">Contact</a>
+                    <a class="mobile-nav-link mobile-nav-active text-primary font-bold py-1.5 transition-colors" href="gallery.html">Gallery</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==================
+         GALLERY HERO
+         ================== -->
+    <section class="gallery-hero px-6 md:px-margin-desktop">
+        <div class="max-w-container-max mx-auto">
+            <div class="pb-8 md:pb-12">
+                <!-- Overline label -->
+                <div class="flex items-center gap-4 mb-8 reveal">
+                    <div class="w-8 h-px bg-secondary"></div>
+                    <span class="font-label-caps text-secondary text-xs tracking-widest uppercase">The Concept Studio</span>
+                </div>
+
+                <!-- Giant display title -->
+                <div class="overflow-hidden">
+                    <h1 id="gallery-title" class="gallery-hero-title leading-none" aria-label="Gallery">
+                        <span class="hero-char">G</span><span class="hero-char">A</span><span class="hero-char">L</span><span class="hero-char">L</span><span class="hero-char">E</span><span class="hero-char">R</span><span class="hero-char">Y</span>
+                    </h1>
+                </div>
+
+                <!-- Subtitle row -->
+                <div class="mt-6 md:mt-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 items-end reveal reveal-delay-2">
+                    <p class="font-body-lg text-on-surface-variant max-w-lg leading-relaxed text-base md:text-lg">
+                        A curated collection of our finest interior spaces, architectural details, and design moments — each frame a testament to the pursuit of spatial perfection.
+                    </p>
+                    <div class="flex items-center gap-5 sm:gap-6 md:justify-end flex-wrap">
+                        <div class="text-center">
+                            <div class="font-serif-luxury text-2xl sm:text-3xl font-semibold text-primary">150+</div>
+                            <div class="font-label-caps text-[9px] text-on-surface-variant tracking-widest mt-1">Projects</div>
+                        </div>
+                        <div class="w-px h-10 sm:h-12 bg-outline-variant"></div>
+                        <div class="text-center">
+                            <div class="font-serif-luxury text-2xl sm:text-3xl font-semibold text-primary">12+</div>
+                            <div class="font-label-caps text-[9px] text-on-surface-variant tracking-widest mt-1">Years</div>
+                        </div>
+                        <div class="w-px h-10 sm:h-12 bg-outline-variant"></div>
+                        <div class="text-center">
+                            <div class="font-serif-luxury text-2xl sm:text-3xl font-semibold text-primary">8</div>
+                            <div class="font-label-caps text-[9px] text-on-surface-variant tracking-widest mt-1">Awards</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================
+         EDITORIAL GRID
+         ================== -->
+    <main>
+        <div class="editorial-container px-6 md:px-margin-desktop">
+            <div class="grid-frame">
+
+                <!-- FILTER BAR -->
+                <div class="filter-bar reveal" id="filter-bar">
+                    <button class="filter-btn active" data-filter="all">All Works</button>
+                    <button class="filter-btn" data-filter="living">Living Spaces</button>
+                    <button class="filter-btn" data-filter="kitchen">Kitchens</button>
+                    <button class="filter-btn" data-filter="bedroom">Bedrooms</button>
+                    <button class="filter-btn" data-filter="commercial">Commercial</button>
+                    <button class="filter-btn" data-filter="exterior">Exteriors</button>
+                </div>
+
+                <!-- ─── ROW 1: 3 equal columns ─── -->
+                <div class="grid-row grid-row-3">
+                    <!-- Card 1 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-1" data-category="living">
+                        <article class="gallery-card" data-lightbox="assets/expertise_interior_design.jpg" data-caption="Aurum Living — Interior Design">
+                            <div class="card-header">
+                                <span class="card-category">Living Spaces</span>
+                                <span class="card-date">Mar 2024</span>
+                            </div>
+                            <div class="card-img-wrap card-img-md">
+                                <img src="assets/expertise_interior_design.jpg" alt="Aurum Living Space" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Aurum Living Suite</h2>
+                                <p class="card-excerpt">A sanctuary of refined textures and warm ivory tones, where architectural precision meets everyday comfort.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined text-base" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-2" data-category="kitchen">
+                        <article class="gallery-card" data-lightbox="assets/expertise_architectural_design.jpg" data-caption="Monolith Kitchen — Architectural Design">
+                            <div class="card-header">
+                                <span class="card-category">Kitchens</span>
+                                <span class="card-date">Jan 2024</span>
+                            </div>
+                            <div class="card-img-wrap card-img-md">
+                                <img src="assets/expertise_architectural_design.jpg" alt="Monolith Kitchen" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">The Monolith Kitchen</h2>
+                                <p class="card-excerpt">Seamless stone surfaces and hidden integrated cabinetry create a kitchen of sculptural minimalism.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined text-base" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-3" data-category="bedroom">
+                        <article class="gallery-card" data-lightbox="assets/project_lumina_bedroom.jpg" data-caption="Lumina Bedroom — Sanctuary Suite">
+                            <div class="card-header">
+                                <span class="card-category">Bedrooms</span>
+                                <span class="card-date">Nov 2023</span>
+                            </div>
+                            <div class="card-img-wrap card-img-md">
+                                <img src="assets/project_lumina_bedroom.jpg" alt="Lumina Bedroom" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Lumina Master Suite</h2>
+                                <p class="card-excerpt">Floating headboard walls and backlit arch details transform the bedroom into a quiet, luminous retreat.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined text-base" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ─── ROW 2: QUOTE (1/3) + LARGE CARD (2/3) ─── -->
+                <div class="grid-row grid-row-quote-2">
+                    <!-- Quote Block -->
+                    <div class="grid-cell reveal">
+                        <div class="quote-block">
+                            <div class="quote-mark">"</div>
+                            <p class="quote-text">Simplicity is about subtracting the obvious and adding the meaningful.</p>
+                            <p class="quote-author">— John Maeda</p>
+                        </div>
+                    </div>
+
+                    <!-- Large Feature Card -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-2" data-category="living">
+                        <article class="gallery-card" data-lightbox="assets/project_aurum_lounge.jpg" data-caption="The Glass Pavilion — Signature Space">
+                            <div class="card-header">
+                                <span class="card-category">Living Spaces</span>
+                                <span class="card-date">Oct 2023</span>
+                            </div>
+                            <div class="card-img-wrap card-img-lg">
+                                <img src="assets/project_aurum_lounge.jpg" alt="Glass Pavilion Lounge" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">The Glass Pavilion</h2>
+                                <p class="card-excerpt">A living space conceived as an extension of the landscape — dissolving the boundary between interior and exterior through floor-to-ceiling glazing and travertine stone.
+                                </p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined text-base" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ─── ROW 3: LARGE (2/3) + SOCIAL BLOCK (1/3) ─── -->
+                <div class="grid-row grid-row-2-1">
+                    <!-- Promo / Feature Card -->
+                    <div class="grid-cell gallery-card-wrap reveal" data-category="commercial">
+                        <div class="promo-card">
+                            <img src="assets/cta_bg_home.jpg" alt="The Concept Signature Commercial Space" loading="lazy">
+                            <div class="promo-overlay"></div>
+                            <div class="promo-content">
+                                <p class="promo-tag">Commercial Design</p>
+                                <h2 class="promo-title">Crafting Spaces<br>That Define Brands</h2>
+                                <a href="contact.html" class="promo-btn">
+                                    Begin Your Project
+                                    <span class="material-symbols-outlined" style="font-size:16px;">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Block -->
+                    <div class="grid-cell reveal reveal-delay-2">
+                        <div class="social-block">
+                            <span class="social-title">Follow Us</span>
+                            <div class="social-icons">
+                                <!-- Instagram -->
+                                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Instagram">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                                <!-- Facebook -->
+                                <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Facebook">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                                </a>
+                                <!-- LinkedIn -->
+                                <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="LinkedIn">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                                </a>
+                                <!-- Pinterest -->
+                                <a href="https://pinterest.com" target="_blank" rel="noopener" class="social-icon-link" aria-label="Pinterest">
+                                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0C5.373 0 0 5.373 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738a.36.36 0 0 1 .083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.632-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0z"/></svg>
+                                </a>
+                            </div>
+                            <p class="font-body-md text-xs text-on-surface-variant text-center max-w-[160px]">Follow our design journey across platforms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ─── ROW 4: 3 equal columns ─── -->
+                <div class="grid-row grid-row-3">
+                    <!-- Card 4 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-1" data-category="exterior">
+                        <article class="gallery-card" data-lightbox="assets/pillar_authenticity.jpg" data-caption="Timber Foyer — Material Authenticity">
+                            <div class="card-header">
+                                <span class="card-category">Exteriors</span>
+                                <span class="card-date">Sep 2023</span>
+                            </div>
+                            <div class="card-img-wrap card-img-md">
+                                <img src="assets/pillar_authenticity.jpg" alt="Timber Foyer" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Timber & Stone Foyer</h2>
+                                <p class="card-excerpt">Natural materials speak in their truest form — rough-cut stone meets warm-toned reclaimed timber for an entrance of quiet drama.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-2" data-category="living">
+                        <article class="gallery-card" data-lightbox="assets/pillar_equilibrium.jpg" data-caption="Equilibrium Suite — Balance in Form">
+                            <div class="card-header">
+                                <span class="card-category">Living Spaces</span>
+                                <span class="card-date">Aug 2023</span>
+                            </div>
+                            <div class="card-img-wrap card-img-md">
+                                <img src="assets/pillar_equilibrium.jpg" alt="Equilibrium Suite" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">The Equilibrium Suite</h2>
+                                <p class="card-excerpt">Every element poised in visual harmony — a living space where symmetry and restraint create an environment of absolute calm.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-3" data-category="bedroom">
+                        <article class="gallery-card" data-lightbox="assets/project_sanctuary_suite.jpg" data-caption="Sanctuary Suite — Bedroom Design">
+                            <div class="card-header">
+                                <span class="card-category">Bedrooms</span>
+                                <span class="card-date">Jun 2023</span>
+                            </div>
+                            <div class="card-img-wrap card-img-md">
+                                <img src="assets/project_sanctuary_suite.jpg" alt="Sanctuary Suite" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Sanctuary Suite</h2>
+                                <p class="card-excerpt">A cocoon of linen textures and indirect lighting, where the bedroom becomes a restorative sanctuary of tactile pleasure.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ─── ROW 5: LARGE CARD + QUOTE ─── -->
+                <div class="grid-row grid-row-1-2">
+                    <!-- Second Quote Block -->
+                    <div class="grid-cell reveal">
+                        <div class="quote-block" style="background: #F4F0E6;">
+                            <div class="quote-mark">"</div>
+                            <p class="quote-text">Less is more. The details are not the details. They make the design.</p>
+                            <p class="quote-author">— Charles Eames</p>
+                        </div>
+                    </div>
+
+                    <!-- Wide Architectural Card -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-2" data-category="exterior">
+                        <article class="gallery-card" data-lightbox="assets/space_glass_pavilion.jpg" data-caption="Glass Pavilion — Architectural Exterior">
+                            <div class="card-header">
+                                <span class="card-category">Exteriors</span>
+                                <span class="card-date">Apr 2023</span>
+                            </div>
+                            <div class="card-img-wrap card-img-lg">
+                                <img src="assets/space_glass_pavilion.jpg" alt="Glass Pavilion Exterior" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Glass Pavilion Exterior</h2>
+                                <p class="card-excerpt">The facade dissolves into the garden through expansive glazed walls — a dialogue between the built and the natural, precision and softness.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- ─── ROW 6: 3 equal columns (final row) ─── -->
+                <div class="grid-row grid-row-3">
+                    <!-- Card 7 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-1" data-category="commercial">
+                        <article class="gallery-card" data-lightbox="assets/expertise_space_planning.jpg" data-caption="Precision Space — Commercial Planning">
+                            <div class="card-header">
+                                <span class="card-category">Commercial</span>
+                                <span class="card-date">Feb 2023</span>
+                            </div>
+                            <div class="card-img-wrap card-img-sm">
+                                <img src="assets/expertise_space_planning.jpg" alt="Commercial Space Planning" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Precision Commercial Space</h2>
+                                <p class="card-excerpt">Spatial planning that enables fluid movement, productive collaboration, and an atmosphere of understated refinement.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-2" data-category="kitchen">
+                        <article class="gallery-card" data-lightbox="assets/expertise_furniture_materials.jpg" data-caption="Material Kitchen — Furniture & Materials">
+                            <div class="card-header">
+                                <span class="card-category">Kitchens</span>
+                                <span class="card-date">Dec 2022</span>
+                            </div>
+                            <div class="card-img-wrap card-img-sm">
+                                <img src="assets/expertise_furniture_materials.jpg" alt="Material Kitchen" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Material Kitchen Study</h2>
+                                <p class="card-excerpt">A study in materiality — the warmth of oak, the coolness of marble, and the precision of custom-millwork come together perfectly.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Card 9 -->
+                    <div class="grid-cell gallery-card-wrap reveal reveal-delay-3" data-category="living">
+                        <article class="gallery-card" data-lightbox="assets/project_japandi_dining.jpg" data-caption="Japandi Dining — Wabi-Sabi Elegance">
+                            <div class="card-header">
+                                <span class="card-category">Living Spaces</span>
+                                <span class="card-date">Oct 2022</span>
+                            </div>
+                            <div class="card-img-wrap card-img-sm">
+                                <img src="assets/project_japandi_dining.jpg" alt="Japandi Dining Room" loading="lazy">
+                            </div>
+                            <div class="card-body">
+                                <h2 class="card-title">Japandi Dining Room</h2>
+                                <p class="card-excerpt">The meeting of Japanese wabi-sabi and Scandinavian hygge — a dining space of textured wood, clay walls, and gathered light.</p>
+                                <span class="card-link">
+                                    View Project
+                                    <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+                                </span>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+            </div><!-- /grid-frame -->
+
+            <!-- ─── STATS ROW ─── -->
+            <div class="stats-row reveal">
+                <div class="stat-cell">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Spaces Designed</div>
+                </div>
+                <div class="stat-cell">
+                    <div class="stat-number">12+</div>
+                    <div class="stat-label">Years of Craft</div>
+                </div>
+                <div class="stat-cell">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Design Awards</div>
+                </div>
+            </div>
+        </div><!-- /editorial-container -->
+
+        <!-- ==================
+             CTA SECTION
+             ================== -->
+        <section id="cta" class="py-20 md:py-28 relative z-20 overflow-hidden bg-primary mt-0">
+            <img src="assets/pillar_precision.jpg" alt="Interior Architecture" class="absolute inset-0 w-full h-full object-cover object-center opacity-80 pointer-events-none">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/60 pointer-events-none"></div>
+            <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop text-center relative z-10">
+                <div class="reveal max-w-3xl mx-auto p-8 sm:p-12 md:p-16 rounded-3xl bg-black/40 backdrop-blur-md border border-white/20 shadow-2xl">
+                    <span class="inline-block font-label-caps text-secondary-fixed text-xs tracking-widest uppercase mb-4 font-semibold">Bring Your Vision to Life</span>
+                    <h2 class="font-display-lg text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight drop-shadow-lg" style="font-family: 'Playfair Display', serif; font-weight:400;">Ready to design your space?</h2>
+                    <p class="font-body-lg text-white/90 mb-10 max-w-xl mx-auto leading-relaxed drop-shadow-md text-base sm:text-lg">
+                        Let's collaborate to craft an interior that reflects your unique vision — with architectural precision and timeless design.
+                    </p>
+                    <a href="contact.html" class="inline-block bg-surface text-primary px-10 sm:px-12 py-5 sm:py-6 rounded-full font-label-caps text-xs uppercase tracking-widest hover:bg-secondary-fixed hover:scale-105 transition-all font-semibold shadow-2xl">
+                        Start a Conversation
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ==================
+         FOOTER
+         ================== -->
+    <footer class="bg-surface border-t border-outline-variant/30 py-20 relative z-20">
+        <div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+                <div class="col-span-1 md:col-span-2">
+                    <a href="index.html" class="inline-block mb-6 group">
+                        <img src="assets/the_concept_logo_dark.png" alt="The Concept" class="h-10 sm:h-11 md:h-12 w-auto object-contain transition-transform duration-500 group-hover:scale-105">
+                    </a>
+                    <p class="font-body-md text-on-surface-variant max-w-sm leading-relaxed">
+                        An international interior architecture studio based in London and Paris, specializing in high-end minimalist design.
+                    </p>
+                </div>
+
+                <div>
+                    <h5 class="font-label-caps text-primary text-xs uppercase tracking-widest mb-6">Contact</h5>
+                    <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+                        <li><a href="mailto:hello@theconcept.studio" class="hover:text-primary transition-colors">hello@theconcept.studio</a></li>
+                        <li><a href="tel:+442079460000" class="hover:text-primary transition-colors">+44 (0) 20 7946 0000</a></li>
+                        <li>24 Savile Row, London</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h5 class="font-label-caps text-primary text-xs uppercase tracking-widest mb-6">Explore</h5>
+                    <ul class="space-y-3 font-body-md text-on-surface-variant text-sm">
+                        <li><a class="hover:text-primary transition-colors" href="spaces.html">Signature Spaces</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="philosophy.html">Our Philosophy</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="gallery.html">Gallery</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="contact.html">Begin Your Journey</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-outline-variant/30 text-xs">
+                <p class="font-label-caps text-[10px] text-on-surface-variant mb-4 md:mb-0">© 2024 The Concept Studio. All rights reserved.</p>
+                <div class="flex gap-8 font-label-caps text-[10px] text-on-surface-variant">
+                    <a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+                    <a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Call Button -->
+    <aside aria-label="Direct Phone Line" class="fixed bottom-6 right-6 md:bottom-8 md:right-8 z-50">
+        <a id="floating-call-btn" href="tel:+442079460000" aria-label="Call The Concept Studio" class="group relative flex items-center justify-center size-14 sm:size-16 rounded-full bg-primary text-white shadow-2xl border border-white/20 backdrop-blur-md transition-all duration-300 hover:scale-110 hover:shadow-[0_12px_36px_rgba(0,0,0,0.5)] hover:border-secondary-fixed active:scale-95 focus:outline-none" title="Call The Concept Studio">
+            <span class="absolute -inset-1 rounded-full bg-secondary-fixed/25 animate-ping opacity-50 pointer-events-none group-hover:opacity-100"></span>
+            <img src="assets/vintage_phone_white.png" alt="Telephone" class="relative z-10 size-7 sm:size-8 object-contain transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110">
+            <span class="absolute right-full mr-3.5 px-3.5 py-1.5 rounded-full bg-primary/90 backdrop-blur-md text-white text-[10px] font-label-caps uppercase tracking-widest whitespace-nowrap opacity-0 pointer-events-none -translate-x-2 transition-all duration-300 group-hover:opacity-100 group-hover:translate-x-0 border border-white/15 shadow-xl hidden sm:block">
+                Direct Line
+            </span>
+        </a>
+    </aside>
+
+    <!-- ==================
+         LIGHTBOX
+         ================== -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+        <span id="lightbox-close" aria-label="Close lightbox">&times;</span>
+        <span id="lightbox-prev" aria-label="Previous image">&#8249;</span>
+        <img id="lightbox-img" src="" alt="Gallery image">
+        <span id="lightbox-next" aria-label="Next image">&#8250;</span>
+        <div id="lightbox-dots"></div>
+        <div id="lightbox-caption"></div>
+    </div>
+
+    <!-- ==================
+         SCRIPTS
+         ================== -->
+    <script>
+        // ── Hero Character Animation ──
+        document.addEventListener('DOMContentLoaded', () => {
+            const chars = document.querySelectorAll('.hero-char');
+            chars.forEach((char, i) => {
+                setTimeout(() => {
+                    char.classList.add('active');
+                }, 100 + i * 55);
+            });
+        });
+
+        // ── Scroll Reveal ──
+        function revealOnScroll() {
+            const reveals = document.querySelectorAll('.reveal');
+            const windowHeight = window.innerHeight;
+            reveals.forEach(el => {
+                const top = el.getBoundingClientRect().top;
+                if (top < windowHeight - 90) {
+                    el.classList.add('active');
+                }
+            });
+        }
+        window.addEventListener('scroll', revealOnScroll, { passive: true });
+        document.addEventListener('DOMContentLoaded', revealOnScroll);
+
+        // ── Mobile Menu Toggle ──
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const menuIcon = document.getElementById('menuIcon');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+                menuIcon.textContent = mobileMenu.classList.contains('hidden') ? 'menu' : 'close';
+            });
+        }
+
+        // ── Header Theme (logo/nav dark↔light) ──
+        const mainHeader = document.getElementById('main-header');
+        const headerLogo = document.getElementById('header-logo');
+        const headerNav = document.getElementById('header-nav');
+
+        function updateHeaderTheme() {
+            if (!headerLogo) return;
+            const logoRect = headerLogo.getBoundingClientRect();
+            const logoCheckY = logoRect.top + (logoRect.height / 2);
+            const navRect = headerNav ? headerNav.getBoundingClientRect() : logoRect;
+            const navCheckY = navRect.top + (navRect.height / 2);
+
+            const darkElements = document.querySelectorAll('section.bg-primary, div.bg-primary, footer.bg-primary, .bg-stone-900, .bg-black, [data-theme="dark"], #cta');
+            let isLogoOverDark = false;
+            let isNavOverDark = false;
+
+            darkElements.forEach(el => {
+                const rect = el.getBoundingClientRect();
+                if (rect.top <= logoCheckY && rect.bottom >= logoCheckY) isLogoOverDark = true;
+                if (rect.top <= navCheckY && rect.bottom >= navCheckY) isNavOverDark = true;
+            });
+
+            headerLogo.classList.toggle('logo-on-dark', isLogoOverDark);
+            headerLogo.classList.toggle('logo-on-light', !isLogoOverDark);
+            if (mainHeader) {
+                mainHeader.classList.toggle('header-dark', isNavOverDark);
+            }
+        }
+
+        window.addEventListener('scroll', updateHeaderTheme, { passive: true });
+        document.addEventListener('DOMContentLoaded', updateHeaderTheme);
+        window.addEventListener('resize', updateHeaderTheme);
+
+        // ── Gallery Card Filter ──
+        document.addEventListener('DOMContentLoaded', () => {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const cards = document.querySelectorAll('.gallery-card-wrap');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filter = btn.dataset.filter;
+                    cards.forEach(card => {
+                        const category = card.dataset.category;
+                        if (filter === 'all' || category === filter) {
+                            card.classList.remove('hidden-card');
+                        } else {
+                            card.classList.add('hidden-card');
+                        }
+                    });
+                });
+            });
+        });
+
+        // ── Lightbox ──
+        document.addEventListener('DOMContentLoaded', () => {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const lightboxClose = document.getElementById('lightbox-close');
+            const lightboxPrev = document.getElementById('lightbox-prev');
+            const lightboxNext = document.getElementById('lightbox-next');
+
+            // Collect all lightbox-enabled cards
+            const galleryCards = Array.from(document.querySelectorAll('.gallery-card[data-lightbox]'));
+            let currentIndex = 0;
+
+            function openLightbox(index) {
+                currentIndex = index;
+                const card = galleryCards[currentIndex];
+                lightboxImg.src = card.dataset.lightbox;
+                lightboxImg.alt = card.dataset.caption || '';
+                lightboxCaption.textContent = card.dataset.caption || '';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('open');
+                document.body.style.overflow = '';
+                lightboxImg.src = '';
+            }
+
+            function showPrev() {
+                currentIndex = (currentIndex - 1 + galleryCards.length) % galleryCards.length;
+                lightboxImg.style.opacity = '0';
+                setTimeout(() => {
+                    const card = galleryCards[currentIndex];
+                    lightboxImg.src = card.dataset.lightbox;
+                    lightboxCaption.textContent = card.dataset.caption || '';
+                    lightboxImg.style.opacity = '1';
+                }, 200);
+            }
+
+            function showNext() {
+                currentIndex = (currentIndex + 1) % galleryCards.length;
+                lightboxImg.style.opacity = '0';
+                setTimeout(() => {
+                    const card = galleryCards[currentIndex];
+                    lightboxImg.src = card.dataset.lightbox;
+                    lightboxCaption.textContent = card.dataset.caption || '';
+                    lightboxImg.style.opacity = '1';
+                }, 200);
+            }
+
+            // Attach click handlers to each card
+            galleryCards.forEach((card, index) => {
+                card.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    openLightbox(index);
+                });
+            });
+
+            lightboxClose.addEventListener('click', closeLightbox);
+            lightboxPrev.addEventListener('click', showPrev);
+            lightboxNext.addEventListener('click', showNext);
+
+            // Close on backdrop click
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('open')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showPrev();
+                if (e.key === 'ArrowRight') showNext();
+            });
+
+            // Touch swipe support for mobile
+            let touchStartX = 0;
+            let touchEndX = 0;
+            const SWIPE_THRESHOLD = 50;
+
+            lightbox.addEventListener('touchstart', (e) => {
+                touchStartX = e.changedTouches[0].screenX;
+            }, { passive: true });
+
+            lightbox.addEventListener('touchend', (e) => {
+                touchEndX = e.changedTouches[0].screenX;
+                const diff = touchStartX - touchEndX;
+                if (Math.abs(diff) > SWIPE_THRESHOLD) {
+                    diff > 0 ? showNext() : showPrev();
+                }
+            }, { passive: true });
+
+            // Update dots on open/change
+            const dotsContainer = document.getElementById('lightbox-dots');
+            function updateDots() {
+                if (!dotsContainer) return;
+                dotsContainer.innerHTML = '';
+                galleryCards.forEach((_, i) => {
+                    const dot = document.createElement('span');
+                    dot.style.cssText = `width:6px;height:6px;border-radius:50%;background:${i === currentIndex ? '#fff' : 'rgba(255,255,255,0.35)'};display:inline-block;transition:background 0.2s;cursor:pointer;`;
+                    dot.addEventListener('click', (e) => { e.stopPropagation(); openLightbox(i); });
+                    dotsContainer.appendChild(dot);
+                });
+            }
+
+            // Patch openLightbox to also update dots
+            const _origOpen = openLightbox;
+            function openLightboxWithDots(index) {
+                _origOpen(index);
+                updateDots();
+            }
+
+            // Re-attach with dots
+            galleryCards.forEach((card, index) => {
+                card.removeEventListener('click', card._clickHandler);
+                card._clickHandler = (e) => { e.preventDefault(); openLightboxWithDots(index); };
+                card.addEventListener('click', card._clickHandler);
+            });
+
+            // Patch showPrev/showNext to update dots
+            const _origShowPrev = showPrev;
+            const _origShowNext = showNext;
+            lightboxPrev.removeEventListener('click', showPrev);
+            lightboxNext.removeEventListener('click', showNext);
+            lightboxPrev.addEventListener('click', () => { _origShowPrev(); setTimeout(updateDots, 220); });
+            lightboxNext.addEventListener('click', () => { _origShowNext(); setTimeout(updateDots, 220); });
+
+            // Patch touch swipe to update dots
+            lightbox.addEventListener('touchend', () => { setTimeout(updateDots, 220); }, { passive: true });
+        });
+    </script>
+</body>
+</html>
