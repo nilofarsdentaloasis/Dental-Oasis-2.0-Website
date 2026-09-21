@@ -1933,45 +1933,25 @@ footer::before{
   z-index: 1;
 }
 
-/* Editorial Hero Background & Directional Fade Modifiers */
+/* Editorial Hero Background Modifiers (Matches gallery page overlay & opacity 1:1) */
 .gallery-hero-editorial.about-hero-editorial {
   background-image: url('about-hero.png');
   background-position: right 35%;
-}
-.gallery-hero-editorial.about-hero-editorial::before {
-  background: linear-gradient(90deg, rgba(253, 246, 247, 0.95) 0%, rgba(253, 246, 247, 0.86) 42%, rgba(253, 246, 247, 0.40) 70%, rgba(253, 246, 247, 0.15) 100%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 }
 
 .gallery-hero-editorial.doctor-hero-editorial {
   background-image: url('doctor-hero.png');
   background-position: right 30%;
 }
-.gallery-hero-editorial.doctor-hero-editorial::before {
-  background: linear-gradient(90deg, rgba(253, 246, 247, 0.95) 0%, rgba(253, 246, 247, 0.86) 42%, rgba(253, 246, 247, 0.40) 70%, rgba(253, 246, 247, 0.15) 100%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
 
 .gallery-hero-editorial.services-hero-editorial {
   background-image: url('https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1920&q=85');
   background-position: center 40%;
 }
-.gallery-hero-editorial.services-hero-editorial::before {
-  background: linear-gradient(90deg, rgba(253, 246, 247, 0.95) 0%, rgba(253, 246, 247, 0.86) 42%, rgba(253, 246, 247, 0.40) 70%, rgba(253, 246, 247, 0.15) 100%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
-}
 
 .gallery-hero-editorial.contact-hero-editorial {
   background-image: url('contact-hero.jpg');
   background-position: center 45%;
-}
-.gallery-hero-editorial.contact-hero-editorial::before {
-  background: linear-gradient(90deg, rgba(253, 246, 247, 0.95) 0%, rgba(253, 246, 247, 0.86) 42%, rgba(253, 246, 247, 0.40) 70%, rgba(253, 246, 247, 0.15) 100%);
-  backdrop-filter: none;
-  -webkit-backdrop-filter: none;
 }
 
 .gallery-hero-editorial > * {
@@ -2644,12 +2624,6 @@ footer::before{
 @media (max-width: 960px) {
   .gallery-hero-editorial { padding-top: 90px; }
   .gallery-subtitle-row { grid-template-columns: 1fr; gap: 20px; }
-  .about-hero-editorial::before,
-  .doctor-hero-editorial::before,
-  .services-hero-editorial::before,
-  .contact-hero-editorial::before {
-    background: linear-gradient(180deg, rgba(253, 246, 247, 0.96) 0%, rgba(253, 246, 247, 0.88) 50%, rgba(253, 246, 247, 0.65) 80%, rgba(253, 246, 247, 0.40) 100%);
-  }
   .grid-row-3 { grid-template-columns: 1fr 1fr; }
   .grid-row-quote-2 { grid-template-columns: 1fr; }
   .grid-row-2-1 { grid-template-columns: 1fr; }
