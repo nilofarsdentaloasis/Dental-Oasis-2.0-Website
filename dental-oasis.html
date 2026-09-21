@@ -621,12 +621,56 @@ input:focus,select:focus,textarea:focus{border-color:var(--m);box-shadow:0 0 0 4
   color:var(--m);
 }
 
-/* 2. Main Two-Column Split */
+/* 2. Main Two-Column Split (Form & Map side-by-side, no empty space) */
 .contact-main-split{
   display:grid;
   grid-template-columns:1.06fr 1fr;
-  gap:36px;
-  align-items:start;
+  gap:32px;
+  align-items:stretch;
+  margin-bottom:34px;
+}
+.contact-main-split .location-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.contact-main-split .location-card .interactive-map-wrapper{
+  flex:1;
+  min-height:300px;
+  height:100%;
+}
+
+/* 3. Three-Column Balanced Info Cards Grid */
+.contact-cards-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:26px;
+  margin-bottom:36px;
+  align-items:stretch;
+}
+.contact-cards-grid .cip-card{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+.contact-cards-grid .hours-card .contact-emergency-notice{
+  margin-top:auto;
+}
+.contact-cards-grid .social-card .social-links-pill-wrap{
+  margin-top:auto;
+}
+@media(max-width:1080px){
+  .contact-cards-grid{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:20px;
+  }
+}
+@media(max-width:600px){
+  .contact-cards-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+    margin-bottom:24px;
+  }
 }
 
 /* Form Panel */
@@ -3778,9 +3822,8 @@ footer::before{
     </div>
 
     <!-- 2. MAIN TWO-COLUMN SPLIT: ENHANCED FORM (LEFT) + RICH CLINIC LOCATION & MAP (RIGHT) -->
+    <!-- 2. MAIN TWO-COLUMN SPLIT: FORM (LEFT) + RICH CLINIC LOCATION & MAP (RIGHT) -->
     <div class="contact-main-split">
-      
-      <!-- LEFT: Premium Booking & Consultation Form -->
       <div class="contact-form-panel rv">
         <div class="cfp-header">
           <div class="cfp-tag-row">
@@ -3858,10 +3901,9 @@ footer::before{
       </div>
 
       <!-- RIGHT: Interactive Google Maps, Full Location, Timings & Arrival Guide -->
-      <div class="contact-info-panel rv" style="--d:1">
-        
-        <!-- Clinic Verified Location Card -->
-        <div class="cip-card location-card">
+
+      <!-- RIGHT: Interactive Google Maps & Clinic Location -->
+      <div class="cip-card location-card rv" style="--d:1">
           <div class="cip-head">
             <div class="cip-badge-verified">
               <svg class="i" viewBox="0 0 24 24" style="fill:none;stroke:currentColor;stroke-width:2.2"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
@@ -3906,7 +3948,12 @@ footer::before{
         </div>
 
         <!-- Working Hours & Emergency Care Card -->
-        <div class="cip-card hours-card">
+    </div><!-- /contact-main-split -->
+
+    <!-- 3. PRACTICAL CLINIC INFORMATION TILES (3 BALANCED COLUMNS) -->
+    <div class="contact-cards-grid rv" style="--d:2">
+      <!-- Working Hours & Emergency Care Card -->
+      <div class="cip-card hours-card">
           <div class="cip-head">
             <h4 class="cip-title">Clinic Operating Hours</h4>
             <span class="cip-live-tag">Open Mon–Sat</span>
@@ -3939,7 +3986,9 @@ footer::before{
         </div>
 
         <!-- How to Reach & Landmark Guide -->
-        <div class="cip-card arrival-card">
+
+      <!-- How to Reach & Landmark Guide -->
+      <div class="cip-card arrival-card">
           <div class="cip-head">
             <h4 class="cip-title">How to Reach Us &amp; Parking</h4>
           </div>
@@ -3969,7 +4018,9 @@ footer::before{
         </div>
 
         <!-- Social Channels & The Dental Diaries -->
-        <div class="cip-card social-card">
+
+      <!-- Social Channels & The Dental Diaries -->
+      <div class="cip-card social-card">
           <div class="cip-head">
             <h4 class="cip-title">Follow Us &amp; Watch The Dental Diaries</h4>
           </div>
@@ -3981,11 +4032,8 @@ footer::before{
             <a href="https://www.facebook.com/people/Nilofar-Pathan/pfbid02ZFWs8FmUGCsfzwNzNvB5F95VmkrLRqFy9Zs8UbEFB8Qz1US9zesJ3P8GS5csyT3bl/" target="_blank" rel="noopener" class="social-pill-btn" title="Facebook: Nilofar Pathan"><svg class="i"><use href="#fb"/></svg> Facebook</a>
           </div>
         </div>
+    </div><!-- /contact-cards-grid -->
 
-      </div><!-- /contact-info-panel -->
-    </div><!-- /contact-main-split -->
-
-    <!-- 3. FREQUENTLY ASKED QUESTIONS (FAQ) SPECIFIC TO VISITS -->
     <div class="contact-faq-wrap rv">
       <h3 class="contact-faq-heading">Frequently Asked Questions About Appointments</h3>
       <div class="contact-faq-grid">
