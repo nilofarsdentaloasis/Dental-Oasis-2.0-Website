@@ -294,108 +294,115 @@ h1{font-weight:400;font-size:calc(150*var(--u));line-height:calc(130*var(--u));l
   background-position:right 35%;
   background-size:cover;
   background-repeat:no-repeat;
-  min-height:clamp(300px,32vw,420px);
-  padding:calc(82*var(--u) + 62px) 6vw 46px;
+  min-height:clamp(320px,36vw,460px);
+  padding:calc(88*var(--u) + 68px) 6vw 54px;
   display:flex;
   align-items:center;
+  position:relative;
+  image-rendering:-webkit-optimize-contrast;
 }
 #about .ph::before{
   content:"";
   position:absolute;
   inset:0;
-  /* Crystal-clear HD clinic on right, smooth directional gradient fade on left for text legibility */
-  background:linear-gradient(90deg,rgba(46,10,22,0.85) 0%,rgba(58,12,28,0.72) 35%,rgba(72,16,36,0.35) 58%,rgba(0,0,0,0) 80%);
+  /* Crystal-clear HD clinic on right, smooth directional gradient fade on left strictly behind text */
+  background:linear-gradient(90deg,rgba(16,3,8,0.85) 0%,rgba(28,5,14,0.66) 30%,rgba(38,8,19,0.28) 52%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%);
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
   z-index:1;
 }
-#about .ph .ph-text{
-  position:relative;
-  z-index:2;
-  max-width:min(540px,90vw);
-  margin-right:auto;
-  text-align:left;
-  padding:20px 24px;
-  border-radius:18px;
-  background:linear-gradient(135deg,rgba(46,10,22,0.48) 0%,rgba(68,14,34,0.18) 100%);
-  -webkit-backdrop-filter:blur(10px) saturate(1.15);
-  backdrop-filter:blur(10px) saturate(1.15);
-  border:1px solid rgba(255,255,255,0.18);
-  box-shadow:0 12px 34px rgba(25,3,10,0.28),inset 0 1px 0 rgba(255,255,255,0.22);
-}
-#about .ph h2{
-  font-weight:400;
-  font-size:clamp(28px,3.6vw,52px);
-  line-height:1.1;
-  letter-spacing:-.02em;
-  color:#fff;
-  text-shadow:0 2px 14px rgba(0,0,0,0.5);
-  margin:0;
-}
-#about .ph p{
-  max-width:48ch;
-  font-weight:300;
-  font-size:clamp(0.96rem,1.15vw,1.12rem);
-  margin-top:10px;
-  color:#fbebee;
-  line-height:1.5;
-  text-shadow:0 1px 8px rgba(0,0,0,0.4);
-}
+
 #dr-nilofar .ph{
   background-image:url('doctor-hero.png');
   background-position:right 30%;
   background-size:cover;
   background-repeat:no-repeat;
-  min-height:clamp(300px,32vw,420px);
-  padding:calc(82*var(--u) + 62px) 6vw 46px;
+  min-height:clamp(320px,36vw,460px);
+  padding:calc(88*var(--u) + 68px) 6vw 54px;
   display:flex;
   align-items:center;
+  position:relative;
+  image-rendering:-webkit-optimize-contrast;
 }
 #dr-nilofar .ph::before{
   content:"";
   position:absolute;
   inset:0;
-  /* Crystal-clear HD clinic & doctor on right, smooth directional gradient fade on left for text legibility */
-  background:linear-gradient(90deg,rgba(46,10,22,0.85) 0%,rgba(58,12,28,0.72) 35%,rgba(72,16,36,0.35) 58%,rgba(0,0,0,0) 80%);
+  /* Crystal-clear HD clinic & doctor on right, smooth directional gradient fade on left strictly behind text */
+  background:linear-gradient(90deg,rgba(16,3,8,0.85) 0%,rgba(28,5,14,0.66) 30%,rgba(38,8,19,0.28) 52%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%);
   backdrop-filter:none;
   -webkit-backdrop-filter:none;
   z-index:1;
 }
-#dr-nilofar .ph .ph-text{
-  position:relative;
-  z-index:2;
-  max-width:min(540px,90vw);
-  margin-right:auto;
-  text-align:left;
-  padding:20px 24px;
-  border-radius:18px;
-  background:linear-gradient(135deg,rgba(46,10,22,0.48) 0%,rgba(68,14,34,0.18) 100%);
-  -webkit-backdrop-filter:blur(10px) saturate(1.15);
-  backdrop-filter:blur(10px) saturate(1.15);
-  border:1px solid rgba(255,255,255,0.18);
-  box-shadow:0 12px 34px rgba(25,3,10,0.28),inset 0 1px 0 rgba(255,255,255,0.22);
-}
-#dr-nilofar .ph h2{
-  font-weight:400;
-  font-size:clamp(28px,3.6vw,52px);
-  line-height:1.1;
-  letter-spacing:-.02em;
-  color:#fff;
-  text-shadow:0 2px 14px rgba(0,0,0,0.5);
-  margin:0;
-}
-#dr-nilofar .ph p{
-  max-width:48ch;
-  font-weight:300;
-  font-size:clamp(0.96rem,1.15vw,1.12rem);
-  margin-top:10px;
-  color:#fbebee;
-  line-height:1.5;
-  text-shadow:0 1px 8px rgba(0,0,0,0.4);
-}
+
 #services .ph{
   background-image:url('https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=1920&q=85');
   background-position:center 40%;
+  background-size:cover;
+  background-repeat:no-repeat;
+  min-height:clamp(320px,36vw,460px);
+  padding:calc(88*var(--u) + 68px) 6vw 54px;
+  display:flex;
+  align-items:center;
+  position:relative;
+  image-rendering:-webkit-optimize-contrast;
+}
+#services .ph::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  /* Crystal-clear HD clinic on right, smooth directional gradient fade on left strictly behind text */
+  background:linear-gradient(90deg,rgba(16,3,8,0.85) 0%,rgba(28,5,14,0.66) 30%,rgba(38,8,19,0.28) 52%,rgba(0,0,0,0) 70%,rgba(0,0,0,0) 100%);
+  backdrop-filter:none;
+  -webkit-backdrop-filter:none;
+  z-index:1;
+}
+
+/* Unboxed hero text with soft background fade effect across about, doctor, services */
+#about .ph .ph-text,
+#dr-nilofar .ph .ph-text,
+#services .ph .ph-text{
+  position:relative;
+  z-index:2;
+  max-width:min(580px,92vw);
+  margin-right:auto;
+  text-align:left;
+  padding:0;
+  background:transparent;
+  border:none;
+  box-shadow:none;
+}
+#about .ph .ph-text::before,
+#dr-nilofar .ph .ph-text::before,
+#services .ph .ph-text::before{
+  content:"";
+  position:absolute;
+  inset:-24px -36px;
+  background:radial-gradient(ellipse at 25% 50%,rgba(26,4,13,0.55) 0%,rgba(38,6,18,0.25) 50%,transparent 75%);
+  pointer-events:none;
+  z-index:-1;
+}
+#about .ph h2,
+#dr-nilofar .ph h2,
+#services .ph h2{
+  font-weight:400;
+  font-size:clamp(30px,4.2vw,54px);
+  line-height:1.1;
+  letter-spacing:-.02em;
+  color:#fff;
+  text-shadow:0 2px 16px rgba(0,0,0,0.55);
+  margin:0 0 12px;
+}
+#about .ph p,
+#dr-nilofar .ph p,
+#services .ph p{
+  max-width:52ch;
+  font-weight:300;
+  font-size:clamp(0.98rem,1.18vw,1.14rem);
+  color:#fcf1f3;
+  line-height:1.55;
+  text-shadow:0 1px 10px rgba(0,0,0,0.5);
+  margin:0;
 }
 #patient-info .ph{
   background-image:url('https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1920&q=85');
@@ -1976,15 +1983,14 @@ footer::before{
   .brand-outro__copyright{margin-top:14px;padding-top:10px}
   .brand-outro__copyright p{font-size:10px}
 
-  /* About & Doctor Page Hero on Mobile (30% more compact) */
-  #about .ph, #dr-nilofar .ph{padding:75px 4vw 25px;min-height:250px;background-position:82% center}
-  #about .ph::before, #dr-nilofar .ph::before{
-    background:linear-gradient(180deg,rgba(46,10,22,0.85) 0%,rgba(58,12,28,0.72) 40%,rgba(46,10,22,0.55) 75%,rgba(0,0,0,0.2) 100%),
-               linear-gradient(90deg,rgba(46,10,22,0.92) 0%,rgba(58,12,28,0.75) 65%,rgba(0,0,0,0.3) 100%);
+  /* About, Doctor & Services Page Hero on Mobile (unboxed text with soft fade) */
+  #about .ph, #dr-nilofar .ph, #services .ph{padding:75px 4vw 25px;min-height:250px;background-position:82% center}
+  #about .ph::before, #dr-nilofar .ph::before, #services .ph::before{
+    background:linear-gradient(180deg,rgba(18,3,9,0.86) 0%,rgba(28,5,14,0.68) 48%,rgba(40,8,20,0.32) 75%,rgba(0,0,0,0.06) 100%);
   }
-  #about .ph .ph-text, #dr-nilofar .ph .ph-text{padding:16px 14px;border-radius:14px;max-width:100%}
-  #about .ph h2, #dr-nilofar .ph h2{font-size:clamp(24px,7vw,32px)}
-  #about .ph p, #dr-nilofar .ph p{font-size:.92rem;margin-top:8px}
+  #about .ph .ph-text, #dr-nilofar .ph .ph-text, #services .ph .ph-text{padding:0;background:transparent;border:none;box-shadow:none;max-width:100%}
+  #about .ph h2, #dr-nilofar .ph h2, #services .ph h2{font-size:clamp(24px,7vw,32px)}
+  #about .ph p, #dr-nilofar .ph p, #services .ph p{font-size:.92rem;margin-top:8px}
 
   /* Contact Hub (Mobile <= 600px) */
   .contact-quick-grid{grid-template-columns:1fr;gap:12px;margin-bottom:28px}
@@ -2016,10 +2022,10 @@ footer::before{
   .doc p,.doc em{font-size:11.5px}
   .card{padding:18px 14px}
   .ph{padding:90px 4vw 34px}
-  #about .ph, #dr-nilofar .ph{padding:68px 3.5vw 20px;min-height:225px}
-  #about .ph .ph-text, #dr-nilofar .ph .ph-text{padding:12px 10px;border-radius:12px}
-  #about .ph h2, #dr-nilofar .ph h2{font-size:22px}
-  #about .ph p, #dr-nilofar .ph p{font-size:.85rem}
+  #about .ph, #dr-nilofar .ph, #services .ph{padding:68px 3.5vw 20px;min-height:225px}
+  #about .ph .ph-text, #dr-nilofar .ph .ph-text, #services .ph .ph-text{padding:0}
+  #about .ph h2, #dr-nilofar .ph h2, #services .ph h2{font-size:22px}
+  #about .ph p, #dr-nilofar .ph p, #services .ph p{font-size:.85rem}
   footer{padding:28px 4vw 16px}
   .fc-title{font-size:1.2rem}
   .fc-links-grid{grid-template-columns:1fr}
@@ -3384,8 +3390,10 @@ footer::before{
 <!-- ============ PAGE: SERVICES ============ -->
 <section class="page" id="services">
   <div class="ph">
-    <h2 class="ld">Comprehensive Dental Treatments</h2>
-    <p class="ld" style="--n:1">From gentle preventive cleanings to full smile redesigns, delivered with precision care in Moi, Pune.</p>
+    <div class="ph-text">
+      <h2 class="ld">Comprehensive Dental Treatments</h2>
+      <p class="ld" style="--n:1">From gentle preventive cleanings to full smile redesigns, delivered with precision care in Moi, Pune.</p>
+    </div>
   </div>
 
   <!-- ============ 3D BOOK: OUR TREATMENTS ============ -->
